@@ -2,7 +2,7 @@ name: Primeiro Workflow
 on: workflow_dispatch
 jobs:
   primeiro-job:
-    runs-on: ubunto-latest
+    runs-on: windows-latest
     steps:
       - name: Imprimindo saudação
         run: echo "Olá mundo!"

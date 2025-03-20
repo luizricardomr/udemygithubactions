@@ -1,0 +1,10 @@
+name: Primeiro Workflow
+on: workflow_dispatch
+jobs:
+  primeiro-job:
+    runs-on: ubunto-latest
+    steps:
+      - name: Imprimindo saudação
+        run: echo "Olá mundo!"
+      - name: Imprimindo Despedida
+        run: echo "Boa viagem!"

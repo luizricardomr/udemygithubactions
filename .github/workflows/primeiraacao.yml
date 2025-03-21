@@ -9,7 +9,7 @@ jobs:
       - name: Instalando node
         uses: actions/setup-node@v3
         with:
-          'node-version:18'
+          node-version: 18
       - name: Instalando dependencias
         run: npm ci
       - name: Rodando testes

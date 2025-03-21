@@ -1,10 +1,16 @@
 name: Primeiro Workflow
-on: workflow_dispatch
+on: push
 jobs:
   primeiro-job:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
-      - name: Imprimindo saudação
-        run: echo "Olá mundo!"
-      - name: Imprimindo Despedida
-        run: echo "Boa viagem!"
+      - name: Baixando o codigo
+        uses: actions/checkout@v3
+      - name: Instalando node
+        uses: actions/setup-node@v3
+        with:
+          node-version:18
+      - name: Instalando dependencias
+        run: npm ci
+      - name: Rodando testes
+        run: npm test
